@@ -17,3 +17,9 @@ mysqldump -u root -p dbNV > bkNV.sql
 drop database dbNV;
 
 create database dbEmp;
+
+
+mysql -u root -p -h localhost dbEmp < bkNV.sql
+
+use dbEmp
+show tables;
