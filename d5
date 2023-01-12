@@ -1,0 +1,33 @@
+khoi dong hadoop
+start-dfs.sh
+start-yarn.sh
+hadoop fs -ls /
+rstudio
+
+#Buoc 1: Tao ket noi voi Hadoop tu R studio
+Sys.setenv(HADOOP_OPTS="-Djava.libary.path=/usr/local/hadoop/lib/native")
+Sys.setenv(HADOOP_HOME="/usr/local/hadoop")
+Sys.setenv(HADOOP_CMD="/usr/local/hadoop/bin/hadoop")
+Sys.setenv(HADOOP_STREAMING="/usr/local/hadoop/bin/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.6.5.jar")
+Sys.setenv(JAVA_HOME="/usr/lib.jvm/java-8-openjdk-amd64")
+
+#b2: Load thu vien xy ly Mapreduce tren hadoop
+library(rhdfs)
+library(rmr2)
+hdfs.init()
+
+#b3: Thao tac cung Hadoop tren R
+#Liet ke danh sach file tren Hadoop
+hdfs.ls("/")
+
+#tao bang du lieu trong R, sau do luu thanh file xuong Hadoop
+df <- data.frame(
+  Name = c("Nam", "Hung", "Thao"),
+  Age = c(29, 30, 31),
+  Salary = c(2000, 3000, 4444),
+  Vote = c(TRUE, FALSE, FALSE)
+)
+
+df
+#luu du lieu xuong HDFS
+to.dfs(df, "myDf", format="native")
