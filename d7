@@ -1,0 +1,28 @@
+#cài đặt sqoop 
+wget https://archive.apache.org/dist/sqoop/1.4.7/sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz    
+
+mkdir srv
+sudo mv sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz  /srv
+
+cd /srv
+sudo tar -xvf sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz
+ls
+sudo chown -R hduser:hadoop sqoop-1.4.7.bin__hadoop-2.6.0 
+sudo ln -s $(pwd)/sqoop-1.4.7.bin__hadoop-2.6.0 $(pwd)/sqoop
+su
+hadoop
+sudo su hduser
+vi ~/.bashrc
+hoặc dùng nano
+#cấu hình sqoop
+export SQOOP_HOME=/srv/sqoop
+export PATH=$PATH:$SQOOP_HOME/bin
+
+lưu file lại và thoát khỏi file
+source ~/.bashrc
+
+hiển thị đường dẫn
+echo $SQOOP_HOME
+
+sqoop help
+sqoop version
