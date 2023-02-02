@@ -47,3 +47,6 @@ sudo tar -xvf mysql-connector-java-8.0.26.tar.gz
 
 sudo mv mysql-connector-java-8.0.26/mysql-connector-java-8.0.26.jar /$SQOOP_HOME/lib
 
+ls /$SQOOP_HOME/lib/ | grep mysql
+
+
