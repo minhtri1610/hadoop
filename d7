@@ -32,6 +32,7 @@ echo $SQOOP_HOME
 cd $SQOOP_HOME/conf
 sudo mv sqoop-env-template.sh sqoop-env.sh
 
+sửa file sqoop-env.sh theo text # bên dưới
 #Set path to where bin/hadoop is available
 export HADOOP_COMMON_HOME=/usr/local/hadoop
 
