@@ -77,3 +77,8 @@ sudo vi hosts
 cd /home/hduser
 start-hbase.sh
 jps
+
+hbase shell
+
+list
+
