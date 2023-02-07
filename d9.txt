@@ -1,0 +1,49 @@
+##Hbase or Hive (Hive khó cài hơn Hbase)
+#cài đặt HBase trong Hadoop
+
+#kiểm tra biến $JAVA_HOME
+echo $JAVA_HOME
+#nếu đã cài java thì sẽ có kết quả như sau : 
+/usr/lib/jvm/java-8-openjdk-amd64
+
+#tải hbase
+wget https://archive.apache.org/dist/hbase/1.4.9/hbase-1.4.9-bin.tar.gz
+
+#kiểm tra thư mục đã tải về chưa
+ls
+
+#giải nén 
+tar -xvf hbase-1.4.9-bin.tar.gz
+
+#kiểm tra đã giải nén chưa
+ls
+
+# sẽ có thư mục /home/hduser/hbase-1.4.9
+
+cd /home/hduser/hbase-1.4.9
+
+cd conf
+
+ls
+
+chạy 1 trong 2 lệnh bên dưới 
+sudo nano hbase-env.sh
+hoặc
+sudo vi hbase-env.sh
+
+nhập mật khẩu hadoop
+
+sửa lại dòng bên dưới trong file hbase-env.sh
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
+Lưu lại file trên
+
+cd ..
+cd ..
+cd home/hduser
+pwd
+
+sudo vi ~/.bashrc
+export HBASE_HOME=/home/hduser/hbase-1.4.9
+export PATH=$PATH:$HBASE_HOME/bin
+
+source ~/.bashrc
