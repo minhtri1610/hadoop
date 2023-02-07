@@ -1,0 +1,10 @@
+#check version sqoop
+sqoop version
+
+#start-dfs
+start-dfs.sh
+
+#start-yarn.sh
+start-yarn.sh
+
+# mysql -u root -p
