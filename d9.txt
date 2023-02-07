@@ -43,7 +43,30 @@ cd home/hduser
 pwd
 
 sudo vi ~/.bashrc
+
+Thêm vào hai dòng bên dưới vào file trên
 export HBASE_HOME=/home/hduser/hbase-1.4.9
 export PATH=$PATH:$HBASE_HOME/bin
 
 source ~/.bashrc
+
+echo $HBASE_HOME
+sẽ có kết quả như sau
+/home/hduser/hbase-1.4.9
+
+cd hbase-1.4.9/conf/
+sudo vi hbase-site.xml
+
+chỉnh sửa file trên bằng cách thêm nội dung sau
+
+<configuration>
+        <property>
+                <name>hbase:rootdir</name>
+                <value>file:///home/hduser/HBASE/hbase</value>
+        </property>
+        <property>
+                <name>hbase.zookeeper.property.dataDir</name>
+                <value>home/hduser/HBASE/zookeeper</value>
+        </property>
+</configuration>
+
