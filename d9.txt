@@ -70,3 +70,10 @@ sudo vi hbase-site.xml
         </property>
 </configuration>
 
+cd /etc
+#kiểm tra xem có file hosts không
+#chỉnh lại file hosts
+sudo vi hosts
+cd /home/hduser
+start-hbase.sh
+jps
