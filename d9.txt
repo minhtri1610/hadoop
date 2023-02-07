@@ -26,16 +26,16 @@ cd conf
 
 ls
 
-chạy 1 trong 2 lệnh bên dưới 
+#chạy 1 trong 2 lệnh bên dưới 
 sudo nano hbase-env.sh
-hoặc
+#hoặc
 sudo vi hbase-env.sh
 
-nhập mật khẩu hadoop
+#nhập mật khẩu hadoop
 
-sửa lại dòng bên dưới trong file hbase-env.sh
+#sửa lại dòng bên dưới trong file hbase-env.sh
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
-Lưu lại file trên
+#Lưu lại file trên
 
 cd ..
 cd ..
@@ -44,20 +44,20 @@ pwd
 
 sudo vi ~/.bashrc
 
-Thêm vào hai dòng bên dưới vào file trên
+#Thêm vào hai dòng bên dưới vào file trên
 export HBASE_HOME=/home/hduser/hbase-1.4.9
 export PATH=$PATH:$HBASE_HOME/bin
 
 source ~/.bashrc
 
 echo $HBASE_HOME
-sẽ có kết quả như sau
+#sẽ có kết quả như sau
 /home/hduser/hbase-1.4.9
 
 cd hbase-1.4.9/conf/
 sudo vi hbase-site.xml
 
-chỉnh sửa file trên bằng cách thêm nội dung sau
+#chỉnh sửa file trên bằng cách thêm nội dung sau
 
 <configuration>
         <property>
