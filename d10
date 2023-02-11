@@ -1,0 +1,45 @@
+#bản chất của hadoop : write 1 read mulplile
+#Hbase khả năng đọc và ghi dữ liệu rất nhanh
+
+
+#ghi dữ liệu trên Hbase
+#di chuyển thư mục hiện tại ra 
+cd ~
+start-hbase.sh
+jps
+
+hbase shell
+version
+status
+
+#nếu lỗi thì có thể chạy lệnh stop-all.sh
+#rồi sau đó start-all.sh
+
+#chạy lại các lệnh sau để vào hbase
+start-hbase.sh
+jps
+
+hbase shell
+
+#xem list table
+list
+
+#tệp lệnh 
+table_help
+
+#xem tài khoản đang đăng nhập là ai
+whoami
+
+#tạo bảng
+create 'person', 'person_data'
+
+list 'person'
+
+put 'person', 1, 'person_data:age', '25'
+#giải thích
+#1 là rowkey
+#cột age : 25
+#cú pháp tổng quát để put 
+#put 'table_name', 'row_key', 'column_family:column', 'value'
+
+scan 'person'
