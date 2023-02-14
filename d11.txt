@@ -1,0 +1,47 @@
+#Hive Tutorial
+
+sudo wget https://archive.apache.org/dist/hive/hive-2.1.0/apache-hive-2.1.0-bin.tar.gz
+
+ls
+
+#giải nén
+tar -xzf apache-hive-2.1.0-bin.tar.gz 
+
+sudo vi ~/.bashrc
+
+#sửa lại fiel bashcr thêm 2 dòng bên dưới
+
+#HIVE ENV
+export HIVE_HOME=/home/hduser/apache-hive-2.1.0-bin
+export HIVE_PATH=$PATH:$HIVE_HOME/bin
+
+#thực thi file bash
+source ~/.bashrc
+
+#kiểm tra phiên bản của hive
+hive --version
+
+start-dfs.sh
+start-yarn.sh
+hdfs dfs -ls /
+
+hdfs dfs -mkdir -p /user/hive/datawarehouse
+
+hdfs dfs -chmod g+w /user/hive/datawarehouse
+hdfs dfs -chmod g+w /tmp
+
+#sửa file cấu hình hive
+cd apache-hive-2.1.0-bin/conf
+
+sudo mv hive-env.sh.template hive-env.sh
+
+vi hive-env.sh
+
+#sửa lại file hive-env.sh
+export HADOOP_HEAPSIZE=512
+
+HADOOP_HOME=/usr/local/hadoop
+
+export HIVE_CONF_DIR=/home/hduser/apache-hive-2.1.0-bin/conf
+
+
