@@ -13,7 +13,7 @@ sudo vi ~/.bashrc
 
 #HIVE ENV
 export HIVE_HOME=/home/hduser/apache-hive-2.1.0-bin
-export HIVE_PATH=$PATH:$HIVE_HOME/bin
+export PATH=$PATH:$HIVE_HOME/bin
 
 #thực thi file bash
 source ~/.bashrc
