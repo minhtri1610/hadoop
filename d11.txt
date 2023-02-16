@@ -100,3 +100,8 @@ cd ~/apache-hive-2.1.0-bin/bin
 schematool -initSchema -dbType derby
 
 hive
+
+#ở môi trường hive
+show databases;
+create table tblEmployee(Manv string, ten string, tuoi int, luong int);
+select * from tblEmployee;
