@@ -99,3 +99,4 @@ sudo vi hive-schema-2.1.0.derby.sql
 cd ~/apache-hive-2.1.0-bin/bin
 schematool -initSchema -dbType derby
 
+hive
