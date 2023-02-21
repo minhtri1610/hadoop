@@ -1,0 +1,65 @@
+Hadoop core => 
+  HDFS
+  MapReduce
+  Yarn
+
+HBAS-> big table
+Sqoop->ETL
+Hive-> RDMS
+
+#Pig -> programing language
+
+#project
+1. pharse 1: cai dat pig lating
+2. pharse 2: tr
+
+#cài đặt pig
+wget https://archive.apache.org/dist/pig/pig-0.16.0/pig-0.16.0.tar.gz
+
+tar -xzf pig-0.16.0.tar.gz 
+
+sudo vi .bashrc
+
+#Add the following at the end of the file:
+
+# Set PIG_HOME
+
+export PIG_HOME=/home/edureka/pig-0.16.0
+export PATH=$PATH:/home/edureka/pig-0.16.0/bin
+export PIG_CLASSPATH=$HADOOP_CONF_DIR
+
+export PIG_HOME=/home/hduser/pig-0.16.0
+export PATH=$PATH:/home/hduser/pig-0.16.0/bin
+export PIG_CLASSPATH=/usr/local/hadoop
+
+
+#Also, make sure that hadoop path is also set.
+
+source .bashrc
+
+pig -version
+
+pig
+
+pig -x local
+
+#start dfs, start yarn
+
+#cấu hình ip cho máy ảo cùng mạng với máy thật
+(setting -> network -> bridged apded..) -> reset lại máy ảo
+
+#mở web trên hadoop bằng đường dẫn xem đc ko
+http://172.16.21.65:50070/dfshealth.html#tab-overview
+
+
+#cài đặt ssh 
+sudo apt-get install openssh-server
+
+service sshd start
+
+mở cmd
+
+ssh hduser@172.16.21.65
+#nhập mật khẩu
+
+
