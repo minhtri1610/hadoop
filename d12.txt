@@ -62,4 +62,6 @@ mở cmd
 ssh hduser@172.16.21.65
 #nhập mật khẩu
 
+#mở cmd bằng admin
+scp D:\TMT\TRAN_MINH_TRI.csv hduser@172.16.21.65
 
