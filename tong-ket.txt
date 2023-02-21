@@ -1,0 +1,49 @@
+Hadoop là một khung sử dụng lưu trữ phân tán và xử lý song song để lưu trữ và quản lý dữ liệu lớn. 
+Đây là phần mềm được các nhà phân tích dữ liệu sử dụng nhiều nhất để xử lý dữ liệu lớn và quy mô thị trường của nó tiếp tục tăng. 
+Có ba thành phần của Hadoop:
+
+Hadoop HDFS - Hệ thống tệp phân tán Hadoop (HDFS) là đơn vị lưu trữ.
+Hadoop MapReduce - Hadoop MapReduce là đơn vị xử lý.
+Hadoop YARN - Yet Another Resource Negotiator (YARN) là một đơn vị quản lý tài nguyên.
+
+Hadoop là một frameword sử dụng dùng để lưu trữ dữ liệu phân tán và xử lý song song để lưu trữ và quản lý dữ liệu lớn
+có 3 thành phần :
+HDFS là (hadoop distributed file system): đơn vị lưu trữ
+Mapreduce: đơn vị xử lý
+Yarn (yet another resource negotiator) đơn vị quản lý tài nguyên
+
+*HDFS là viết tắt của hadoop distributed file system, là một phần của nền tảng hadoop, được sử dụng để lưu trữ và quản lý các tệp dữ liệu lớn trên nhiều máy tính
+Gồm 2 phần chính là name-node và data-node
+NameNode: chịu trách nhiệm điều phối quản lý các dataNode và lưu trữ tất cả các siêu dữ liệu
+DataNode: được tổ chức lưu trữ theo mỗi block, mỗi block có dung lượng tối đa 128MB, lưu trữ dữ liệu thực tế
+Ngoài ra còn có secondary Namenode phụ trách duy trì nhật kí chỉnh sửa và thông tin hình ảnh không gian tên đồng bộ với máy chủ namenode, nhưng đôi lúc trên máy secondary namenode ko đc cập nhật, nên ko thể hoàn toàn dựa vào máy chủ phụ này để khôi phục
+
+
+HDFS lưu trữ các tệp trong một số khối, mỗi khối được sao chép vào một vài máy tính riêng biệt, namenode chịu trách nhiệm lưu trữ vị trí của khối và bản sao của nó trong cụm
+hdfs dfs -put 
+hdfs dfs -ls
+hdfs dfs -mkdir
+hdfs dfs -rm -r
+
+#HBASE là gì
+là một hệ thống cơ sở dữ liệu phân tán, được mô phỏng theo bigtable của google, có thể được mở rộng theo chiều ngang trên hàng nghìn máy chủ
+hbase chủ yếu để lưu trữ dữ liệu có cấu trúc và bán cấu trúc như các file email, json, xml, .csv,.. ứng dụng cho việc phát triễn cơ sở dữ liệu theo chiều ngang
+
+#Điểm mạnh của Hbase là 
++ Nó có thể lưu trữ dữ lieuj lơn ở định dạng bảng để đọc và ghi cực nhanh
++ sử dụng trong kịch bản yêu cầu chèn và ghi đè dữ liệu một cách thường xuyên và nhất quán
+
+#SQOOP
+- sqoop sử dụng yarn framework để nhập và xuất dữ liệu
+- cho phép nhập truy vấn SQL vào HDFS
+- cho phép kết nối RDBMS
+- Tích hợp bảo mật kerberos
+- Cung cấp tải đầy đủ và tăng dần
+
+#HIVE
+là một hệ thống kho dữ liệu được sử dụng để truy vấn và phân tích các tập dữ liệu lớn được lưu trữ trong HDFS. sử dụng ngộn ngữ truy vấn có tên là HiveQL, tương tự SQL
+
+->flow
+user->(gửi truy vấn hive) MapReduce Task -> Hadoop MapReduce
+
+
