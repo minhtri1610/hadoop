@@ -65,3 +65,4 @@ ssh hduser@172.16.21.65
 #mở cmd bằng admin
 scp D:\TMT\TRAN_MINH_TRI.csv hduser@172.16.21.65:/home/hduser
 
+#pig lating script
