@@ -24,13 +24,13 @@ sudo vi .bashrc
 
 # Set PIG_HOME
 
-export PIG_HOME=/home/edureka/pig-0.16.0
-export PATH=$PATH:/home/edureka/pig-0.16.0/bin
-export PIG_CLASSPATH=$HADOOP_CONF_DIR
+#export PIG_HOME=/home/edureka/pig-0.16.0
+#export PATH=$PATH:/home/edureka/pig-0.16.0/bin
+#export PIG_CLASSPATH=$HADOOP_CONF_DIR
 
 export PIG_HOME=/home/hduser/pig-0.16.0
 export PATH=$PATH:/home/hduser/pig-0.16.0/bin
-export PIG_CLASSPATH=/usr/local/hadoop
+export PIG_CLASSPATH=/usr/local/hadoop/etc/hadoop
 
 
 #Also, make sure that hadoop path is also set.
@@ -65,4 +65,38 @@ ssh hduser@172.16.21.65
 #mở cmd bằng admin
 scp D:\TMT\TRAN_MINH_TRI.csv hduser@172.16.21.65:/home/hduser
 
-#pig lating script
+#pig latin script
+
+#Apache Pig 
+- ko cần biết java cũng có thể tương tác được với mapreduce
+- giảm độ dài mã
+- ngôn ngữ giống SQL
+- bổ sung các kiểu dữ liệu mà mapreduce còn thiếu như tuples, bags, maps
+- Apache Pig có thể xử lý dữ liệu có cấu trúc, phi cấu trúc, bán cấu trúc
+- Pig Latin là ngôn ngữ luồng dữ liệu
+ => Apache Pig đc sử dụng
+  - Xử lý các nguồn dữ liệu lơn như nhật ký web
+  - xử lý cho các nền tảng tìm kiếm
+  - xử lý thời gian tải dữ liệu nhạy cảm
+  
+pig -h properties
+pig -version
+
+có 3 cách để thực thi các tệp lệnh apache pig
+- chế độ tương tác (Grunt shell)  : có thể nhập các lệnh Pig Latin và nhận kết quả
+- Batch Mode (script): viết tập lệnh Pig Latin trong một tệp có đuôi là .pig
+- Chế độ nhúng (UDF): user defined functions 
+
+- Vào chế độ grunt shell bằng lệnh 
+pig -x local
+
+thực thi batch mode:
+pig -x local vi_du.pig
+
+Một số cú pháp trong Grunt
+sh _add thêm lệnh của linux
+fs _add thêm lệnh của linux
+
+#Pig Latin
+các câu kệnh là cấu trúc cơ bản
+-
