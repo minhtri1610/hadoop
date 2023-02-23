@@ -1,0 +1,10 @@
+- dùng ssh đưa dữ liệu vào máy ảo tại thư mục /hduser/ho_ten/
+- copy dữ liệu từ thư mục của hadoop lưu tại thư mục gốc của HDFS là /aptech/ho-ten/...
+- chạy pig shell
+- load data lên pig <dump>
+- hiển thị dữ liệu students
+- Mô tả cấu trúc của students
+- Gom nhóm students theo age
+- Tìm sinh viên ở thành phố là chennai
+- Lấy các thành phố riêng biệt 
+- Hiển thị các thông tin các SV 
