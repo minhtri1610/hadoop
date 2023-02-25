@@ -1,0 +1,57 @@
+https://data-flair.training/blogs/apache-spark-rdd-limitations/
+
+#cai ddawjt
+
+sudo iptables --line -vnL
+#4040
+#6066
+#8080
+#8081
+#kiem tra xem nhung port tren co bi chan ko
+
+sudo wget https://downloads.lightbend.com/scala/2.11.12/scala-2.11.12.tgz
+
+#sudo wget https://downloads.typesafe.com/scala/2.11.7/scala-2.11.7.tar.gz
+
+#tar -xvf scala-2.11.7.tar.gz
+
+tar -xvf scala-2.11.12.tgz
+
+#sudo mv scala-2.11.7 /usr/lib
+sudo mv scala-2.11.12 /usr/lib
+
+#sudo ln -s /usr/lib/scala-2.11.7 /usr/lib/scala
+sudo ln -s /usr/lib/scala-2.11.12 /usr/lib/scala
+
+export PATH=$PATH:/usr/lib/scala/bin
+
+scala -version
+#wget http://d3kbcqa49mib13.cloudfront.net/spark-1.6.0-bin-hadoop2.6.tgz 
+wget https://archive.apache.org/dist/spark/spark-1.6.0/spark-1.6.0-bin-hadoop2.6.tgz
+
+tar -xvf spark-1.6.0-bin-hadoop2.6.tgz
+
+export SPARK_HOME=$HOME/spark-1.6.0-bin-hadoop2.6
+
+export PATH=$PATH:$SPARK_HOME/bin
+#echo $SPARK_HOME
+
+cd $SPARK_HOME
+
+sbin/start-all.sh
+
+#mo trinh duyet dien link
+localhost:8080
+
+scalac --version
+
+sudo vi demo.scala
+
+object ScalaExample{
+  def main(args:Array[String]){
+    println "hello  Scala-Aptech"
+  }
+}
+
+scalac demo.scala
+scala demo.scala
