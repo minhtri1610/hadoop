@@ -1,0 +1,3 @@
+: Cannot create directory /user/hduser/test/data. Name node is in safe mode.
+->
+hdfs dfsadmin -safemode get
